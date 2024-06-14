@@ -28,6 +28,11 @@ client.connect()
   })
   .catch(err => console.error('Error connecting to MongoDB', err));
 
+  //main router
+  app.get('/', (req,res) => {
+    res.send('Server is Running');
+  })
+
 // Routes
 // GET all tasks
 app.get('/api/tasks', async (req, res) => {
